@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
+import ListStudent from "./components/ListStudent";
+import StudentApp from "./components/StudentApp";
+import {BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import ViewsCourse from "./components/courses/ViewsCourse";
+import LoginPage from "./components/Login";
+import Login from "./components/Login";
+import Header from "./components/Header";
+import ViewGrades from "./components/Grades/ViewGrades";
+import ViewAssign from "./components/assignment/ViewAssign";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <div>
+    <Router>
+      <Switch>
+          <Route path='/'  exact component={Login}></Route>
+          <Route path='/StudentApp' exact component={StudentApp}></Route>
+          <Route path='/listStudent' exact component={ListStudent}></Route> 
+          <Route path='/viewCourse' exact component={ViewsCourse}></Route>
+          <Route path='/viewGrade' exact component={ViewGrades}></Route>
+          <Route path='/viewAssign' exact component={ViewAssign}></Route>
+       </Switch>
+       
+        </Router>
+        
+  </div>
   );
 }
 

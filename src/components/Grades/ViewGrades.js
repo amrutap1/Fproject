@@ -25,14 +25,17 @@ export default class ViewGrades extends Component {
     return (
       <div className='container'>
         <Header></Header>
-        <table className="table table-striped table-bordered" >
-          <thead>
+        <h2 style={{alignContent:"center",fontFamily:"sans-serif", marginTop:"50px",marginLeft:"450px"}}>GRADES </h2>
+        <div className='container' style={{width:"800px", marginTop:"10px"}}>
+         
+        <table className="table table-striped table-bordered" align='center' >
+          <thead >
             <tr>
-            <td>id</td>
+            <td>Id</td>
             <td>Feedback</td>
             <td>Grade</td>
-            <td>StudeniID</td>
-            <td>AssignId</td>
+            <td>Student Id</td>
+            <td>Assign Id</td>
           </tr></thead>
           <tbody>
             {
@@ -52,7 +55,7 @@ export default class ViewGrades extends Component {
       </table>
         
 
-        
+        </div>
       </div>
     )
   }

@@ -2,21 +2,19 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Header from './Header';
 import StudentApp from './StudentApp';
-class Login extends Component {
+export default class Login extends Component {
 
   constructor(props) {
     super(props);
-    this.studentApp=this.studentApp.bind(this);
     this.state = {
       id: '',
       username:'',
       password: '',
       role:''
-
     };
-  }
-  studentApp(){
-    this.props.history.push('/studentApp')
+    this.hello=this.hello.bind(this);
+    // this.handleInputChange=this.handleInputChange.bind(this);
+    // this.handleLogin=this.handleLogin.bind(this);
   }
   handleLogin = async (e) => {
     e.preventDefault();
@@ -35,11 +33,15 @@ class Login extends Component {
     // } );
       console.log(response.data); // Handle successful login
     //   this.props.history.push('./studentApp');
+    alert("Registered Successfully");
     } catch (error) {
       console.error(error); // Handle error
     }
   };
 
+  hello=(e)=>{
+      this.props.history.push('./viewCourse');  
+  }
 
   handleInputChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
@@ -101,12 +103,67 @@ class Login extends Component {
           /><br></br>
             </div>
             <a href='./studentApp' style={{"text-decoration":"none","color":"white"}}>
-        <button type="submit" style={{"background-color":"Black","color":"white"}} >Login</button>
-        </a></form>
+        <button type="submit" style={{"background-color":"Black","color":"white"}} >Register</button>
+        </a>
+        </form>
+        <a href='./viewCourse'><button onChange={this.hello}>login</button></a>
       </div>
       </div></div></div>
     );
   }
 }
 
-export default Login;
+
+
+// import React, { useState } from 'react'
+// import axios from 'axios';
+
+// export default function Login() {
+
+//   const [userName,setUsername]=useState("");
+//   const [id,setId]=useState("");
+//   const[role,setRole]=useState("");
+//   const [password,setPassword]=useState("");
+
+
+//   const login=()=>{
+//     axios.post('http://localhost:8000/user/addUser', {
+//         id:id,
+//         userName:userName,
+//         password: password,
+//         role:role
+//       }).then((response)=>{
+//         console.log(response);
+//       });
+//     };
+//   return (
+//     <div>
+
+//   <div class="container">
+//   <label for="uname"><b>id</b></label>
+//     <input type="number" placeholder="Enter id" onChange={(e)=>{
+//       setId(e.target.value)
+//     }} name="uname" required/>
+
+//     <label for="uname"><b>Username</b></label>
+//     <input type="text" placeholder="Enter Username" onChange={(e)=>{
+//       setUsername(e.target.value)
+//     }} name="uname" required/>
+
+//     <label for="psw"><b>Password</b></label>
+//     <input type="password" placeholder="Enter Password" onChange={(e)=>{
+//       setPassword(e.target.value)
+//     }} name="psw" required/>
+
+//     <label for="uname"><b>role</b></label>
+//     <input type="text" placeholder="Enter role" name="role" onChange={(e)=>{
+//       setRole(e.target.value)
+//     }} required/>
+
+//     <button onClick={login}>Login</button>
+  
+// </div>
+//     </div>
+//   )
+// }
+

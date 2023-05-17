@@ -9,7 +9,7 @@ export default class ViewAssign extends Component {
         }
         this.listAssign=this.listAssign.bind(this);
       }
-    
+
       listAssign(){
         this.props.history.push('/')
       }
@@ -25,6 +25,9 @@ export default class ViewAssign extends Component {
     return (
       <div className='container'>
          <Header></Header>
+         <h2 style={{alignContent:"center",fontFamily:"sans-serif", marginTop:"50px",marginLeft:"450px"}}>ASSIGNMENTS </h2>
+       
+         <div className='container' style={{width:"800px", marginTop:"10px"}}>
         <table className="table table-striped table-bordered" >
           <thead>
             <tr>
@@ -49,8 +52,9 @@ export default class ViewAssign extends Component {
           </tbody>
       </table>
         
-
+</div>
       </div>
     )
   }
 }
+

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import Header from '../Header';
 
 export default class AddAssign extends Component {
 
@@ -51,6 +52,8 @@ changeduadate=(e)=>{
   render() {
     return (
       <div className='container'>
+        <Header></Header>
+        <div className='container' style={{width:"800px" ,marginTop:'50px'}}>
         <form>
             {/* <label>assignId</label><br></br>
             <input type='number'
@@ -61,31 +64,33 @@ changeduadate=(e)=>{
              required
              placeholder='Enter Id' >
             </input><br></br> */}
-            <label>assignName</label><br></br>
+            <label>ASSIGNMENT NAME</label><br></br>
             <input type='text'
              name="assignName"
              className="form-control"
              value={this.state.assignName}
              onChange={this.changeassigname}
              required
-             placeholder='Enter name' >
+             placeholder='Enter Assignment Name' >
             </input><br></br>
-            <label>dueDate</label><br></br>
+            <label>DUE DATE</label><br></br>
             <input type='text'
              name="dueDate"
              className="form-control"
              value={this.state.dueDate}
              onChange={this.changeduadate}
              required
+             placeholder='Enter DueDate `2020-02-2-01`'
             >
             </input><br></br>
-            <label>course_id</label><br></br>
+            <label>COURSE ID</label><br></br>
             <input type='text'
              name="courseId"
              className="form-control"
              value={this.state.courseId}
              onChange={this.changecourseid}
              required
+             placeholder='Enter CourseId'
             >
             </input><br></br>
 
@@ -94,7 +99,7 @@ changeduadate=(e)=>{
         </form>
         <br></br>
         <a href='./viewAssign'>< button style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View Assignment</button></a>
-
+              </div>
       </div>
     )
   }

@@ -25,13 +25,14 @@ export default class  extends Component {
     return (
       <div className='container'>
         <Header></Header>
-        <h1>List Customer</h1>
+        <div className='container' style={{width:"800px" ,marginTop:'50px'}}>
+        <h1>LIST STUDENT</h1>
         <table className="table table-striped table-bordered" >
           <thead>
             <tr>
-            <td>id</td>
-            <td>cname</td>
-            <td>password</td>
+            <td>ID</td>
+            <td>STUDENT NAME</td>
+            {/* <td>password</td> */}
           </tr></thead>
           <tbody>
             {
@@ -40,13 +41,13 @@ export default class  extends Component {
                 <tr key={st.id}>
                 <td>{st.id}</td>
                 <td>{st.userName}</td>
-                <td>{st.password}</td>
+                {/* <td>{st.password}</td> */}
                 </tr>
               )
             }
           </tbody>
       </table>
-        
+        </div>
       </div>
     )
   }

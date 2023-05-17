@@ -5,6 +5,7 @@ import './ViewsCourse.css';
 import Header from '../Header';
 import ViewFeedback from '../Feedback/ViewFeedback';
 import ViewAssign from '../assignment/ViewAssign';
+import CourseEnroll from '../StudentEnroll/CourseEnroll';
 
 export default class ViewsCourse extends Component {
 
@@ -14,6 +15,7 @@ export default class ViewsCourse extends Component {
             course :[]
         }
         this.listCourse=this.listCourse.bind(this);
+        this.App1=this.App1.bind(this);
       }
     
       listCourse(){
@@ -28,10 +30,7 @@ export default class ViewsCourse extends Component {
         });
       }
      
-      edit(){
-        this.props.history.push('/viewAssign');
-    }
-   
+      
   
   render() {
     return (
@@ -56,8 +55,8 @@ export default class ViewsCourse extends Component {
                 <p className="card-text">Start Date: {st.startDate}</p>
                 <p className="card-text">End Date: {st.endDate}</p>
                 <p className="card-text">Teacher Id: {st.user.id}</p>
-                <button style={{background:"#DDA0DD",color:"black" ,height:"50px" ,width:"210px" , borderRadius:"40px",border:"none"}} onClick={() => this.edit()} >ENROLL HERE</button>
-                
+              <a href='./courseEnroll'>  <button style={{background:"#DDA0DD",color:"black" ,height:"50px" ,width:"210px" , borderRadius:"40px",border:"none"}}  >ENROLL HERE</button>
+                </a>
                 </div>
                 </div></div>
                 

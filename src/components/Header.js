@@ -7,7 +7,7 @@ export default class Header extends Component {
     return (
       <div className='container' >
         <nav class="navbar navbar-expand-lg navbar-light " style={{backgroundColor:"white"}}>
-            <a class="navbar-brand" href="#" style={{color:"purple",fontStyle:"Bold",margin:"10px"}}>L M S</a>
+            <a class="navbar-brand" href="../TeacherApp" style={{color:"purple",fontStyle:"Bold",margin:"10px"}}>L M S</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

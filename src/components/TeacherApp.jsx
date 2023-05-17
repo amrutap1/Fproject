@@ -3,10 +3,11 @@ import Header from './Header';
 import icourse from './Images/course.jpg';
 import iassign from './Images/assign.jpg';
 import igrade from './Images/grades.jpg';
+import istud from './Images/stud.jpg';
 import imsg from './Images/msg.jpg';
-import wal1 from './Images/wal1.jpg';
-export default class StudentApp extends Component {
+import Footer from './Footer';
 
+export default class TeacherApp extends Component {
     constructor(props){
         super(props);
         this.listStudent=this.listStudent.bind(this);
@@ -34,7 +35,7 @@ enrollStudent(){
     
   render() {
     return (
-      <div className='container'>
+      <div className='container' style={{height:'1000px'}}>
         <Header></Header>
         <div className='container'>
         <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -56,30 +57,31 @@ enrollStudent(){
                      </div>
                     </div>
                    </div>
-                  {/* <div class="col">
-                    <div class="card">
-
-                      <div class="card-body">
-                        <h5 class="card-title"><a href='./viewFeedback'>< button style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View Feedback</button></a><br></br>
-                         </h5>
-                      </div>
-                    </div>
-                  </div> */} 
                   <div class="col">
                     <div class="card">
                     <img src={iassign} class="card-img-top" alt="..." style={{height:"200px"}}/>
                       <div class="card-body">
-                        <h5 class="card-title"><a href='./viewAssign'>< button style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View Assignment</button></a><br></br>
+                        <h5 class="card-title"><a href='./addAssign'>< button style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>Add Assignments Here</button></a><br></br>
+                         </h5>
+                      </div>
+                    </div>
+                  </div> 
+                  
+                  <div class="col">
+                    <div class="card">
+                        
+                   <img src={istud} class="card-img-top" alt="..." style={{height:"200px"}}/>
+                      <div class="card-body">
+                        <h5 class="card-title"><a href='./listStudent'>< button style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View Enroll-Students</button></a><br></br>
                          </h5>
                       </div>
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card">
-                      
-                    <img src={wal1} class="card-img-top" alt="..." style={{height:"200px"}}/>
+                    <div class="card"> 
+                   <img src={iassign} class="card-img-top" alt="..." style={{height:"200px"}}/>
                       <div class="card-body">
-                        <h5 class="card-title"><a href='./courseEnroll'>< button style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}> Enroll Here</button></a><br></br>
+                        <h5 class="card-title"><a href='./viewAssign'>< button style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View Assignment</button></a><br></br>
                          </h5>
                       </div>
                     </div>
@@ -93,16 +95,21 @@ enrollStudent(){
                       </div>
                     </div>
                   </div>
+                  <div class="col">
+                    <div class="card"> 
+                   <img src={icourse} class="card-img-top" alt="..." style={{height:"200px"}}/>
+                      <div class="card-body">
+                        <h5 class="card-title"><a href='./addCourse'>< button style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}> Add Courses</button></a><br></br>
+                         </h5>
+                      </div>
+                    </div>
+                  </div>
                 </div>
       
       </div>
-        {/* <a href='./listStudent'>< button className='btn btn-block btn-primary'>List Student</button></a><br></br> */}
-      {/* its views Grades ByStudentid  */}
-      {/* <a href='./viewFeedback'>< button className='btn btn-block btn-primary'>View Feedback</button></a><br></br>
+      <Footer></Footer>
+        </div>
         
-        <a href='./viewAssign'>< button className='btn btn-block btn-primary'>View Assignments</button></a><br></br>
-        <a href='./enrollStudent'>< button className='btn btn-block btn-primary'>enrollStudent</button></a><br></br> */}
-      </div>
     )
   }
 }

@@ -53,8 +53,8 @@ enrollStudent(){
                           </h5>
                      </div>
                     </div>
-                  </div>
-                  <div class="col">
+                   </div>
+                  {/* <div class="col">
                     <div class="card">
 
                       <div class="card-body">
@@ -62,7 +62,7 @@ enrollStudent(){
                          </h5>
                       </div>
                     </div>
-                  </div>
+                  </div> */} 
                   <div class="col">
                     <div class="card">
                     <img src={iassign} class="card-img-top" alt="..." style={{height:"200px"}}/>

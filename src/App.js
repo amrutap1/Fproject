@@ -8,12 +8,14 @@ import Login from "./components/Login";
 import EnrollStudent from "./components/Feedback/EnrollStudent";
 import CourseEnroll from "./components/StudentEnroll/CourseEnroll";
 import AddAssign from "./components/assignment/AddAssign";
+import Register from "./components/Register";
 function App() {
   return (
   <div>
     <Router>
       <Switch>
-          <Route path='/'  exact component={Login}></Route>
+          <Route path='/'  exact component={Register}></Route>
+          <Route path='/login' exact component={Login}></Route>
           <Route path='/StudentApp' exact component={StudentApp}></Route>
           <Route path='/listStudent' exact component={ListStudent}></Route> 
           <Route path='/viewCourse' exact component={ViewsCourse}></Route>

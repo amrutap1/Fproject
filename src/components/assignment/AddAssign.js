@@ -6,12 +6,11 @@ export default class AddAssign extends Component {
     constructor(props){
         super(props);
         this.state={
-            assignId:'',
+           
             assignName:'',
             dueDate:'',
             courseId:''
         };
-        this.changeid=this.changeid.bind(this);
         this.changecourseid=this.changecourseid.bind(this);
         this.changeassigname=this.changeassigname.bind(this);
         this.changeduadate=this.changeduadate.bind(this);
@@ -20,17 +19,19 @@ export default class AddAssign extends Component {
 
     save=async (e)=>{
         let assignment={
-            assignId:this.state.assignId,
             assignName:this.state.assignName,
             dueDate:this.state.dueDate,
             courseId:this.state.courseId
         }
+        alert("Assignment Added SuccessFully")
         try {
          const response = await axios.post("http://localhost:8000/user/addAssign",
                    assignment);
        
-      console.log(response.data); // Handle successful login
+      console.log(response.data);
+     
 //   this.props.history.push('./studentApp');
+
 } catch (error) {
   console.log(error); // Handle error
 }
@@ -39,9 +40,6 @@ changecourseid=(e)=>{
     this.setState({courseId:e.target.value});
 }
 
-changeid=(e)=>{
-    this.setState({assignId:e.target.value});
-}
 
 changeassigname=(e)=>{
     this.setState({assignName:e.target.value});
@@ -54,7 +52,7 @@ changeduadate=(e)=>{
     return (
       <div className='container'>
         <form>
-            <label>assignId</label><br></br>
+            {/* <label>assignId</label><br></br>
             <input type='number'
              name="assignId"
              className="form-control"
@@ -62,7 +60,7 @@ changeduadate=(e)=>{
              onChange={this.changeid}
              required
              placeholder='Enter Id' >
-            </input><br></br>
+            </input><br></br> */}
             <label>assignName</label><br></br>
             <input type='text'
              name="assignName"
@@ -91,8 +89,11 @@ changeduadate=(e)=>{
             >
             </input><br></br>
 
-            <button onClick={this.save}>save</button>
+            {/* <button onClick={this.save}><a href='./viewAssign'>save</a></button> */}
+            <button type="submit" onClick={this.save} style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>save</button>
         </form>
+        <br></br>
+        <a href='./viewAssign'>< button style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View Assignment</button></a>
 
       </div>
     )

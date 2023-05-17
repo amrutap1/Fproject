@@ -1,119 +1,79 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import axios from 'axios';
-import Header from './Header';
-import StudentApp from './StudentApp';
 export default class Login extends Component {
-
+  
   constructor(props) {
     super(props);
+
     this.state = {
-      id: '',
-      username:'',
-      password: '',
-      role:''
+      userName: "",
+      password: ""
+     
     };
-    this.hello=this.hello.bind(this);
-    // this.handleInputChange=this.handleInputChange.bind(this);
-    // this.handleLogin=this.handleLogin.bind(this);
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
-  handleLogin = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.post('http://localhost:8000/user/addUser', {
-        id: this.state.id,
-        userName:this.state.username,
-        password: this.state.password,
-        role:this.state.role
+
+  handleChange(event) {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  }
+
+  handleSubmit(event) {
+    const { userName, password } = this.state;
+
+    axios
+      .post(
+        "http://localhost:8000/user/addUser",
+        {
+          user: {
+            userName: userName,
+            password: password
+          }
+        },
+        { withCredentials: true }
+      )
+      .then(response => {
+        if (response.data.logged_in) {
+          this.props.handleSuccessfulAuth(response.data);
+        }
       })
-    //   .then(data => {
-    //     const { role } = data.bd
-
-    //     if(role == 'STUDENT') window.location.href = '../StudentApp'
-    //     else  window.location.href = '../viewCourse'
-    // } );
-      console.log(response.data); // Handle successful login
-    //   this.props.history.push('./studentApp');
-    alert("Registered Successfully");
-    } catch (error) {
-      console.error(error); // Handle error
-    }
-  };
-
-  hello=(e)=>{
-      this.props.history.push('./viewCourse');  
+      .catch(error => {
+        console.log("login error", error);
+      });
+    event.preventDefault();
   }
-
-  handleInputChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
 
   render() {
     return (
-      <div className='container'>
-        <div class="container my-5">
-        <div class="row justify-content-center">
-          <div class="col-md-6">
-            <h1 class="text-center mb-5">Log In</h1>
-            <form class="container" id="formLogin" onSubmit={this.handleLogin}>
-            
-            <div class="mb-3">
-          <label>Id:</label>
+      <div>
+        <form onSubmit={this.handleSubmit}>
           <input
-            type="number"
-            name="id"
-            className="form-control"
-            value={this.state.id}
-            onChange={this.handleInputChange}
-            required
-            placeholder='Enter Id'
-          /><br></br></div>
-          <div class="mb-3">
-           <label>userName:</label>
-           <input
             type="text"
-            className="form-control"
-            name="username"
-            value={this.state.username}
-            onChange={this.handleInputChange}
+            name="email"
+            placeholder="Email"
+            value={this.state.email}
+            onChange={this.handleChange}
             required
-            placeholder="Enter username"
-          /><br></br>
-            </div>
-            <div class="mb-3">
-          <label>Password:</label>
+          />
+
           <input
             type="password"
-            className="form-control"
             name="password"
+            placeholder="Password"
             value={this.state.password}
-            onChange={this.handleInputChange}
+            onChange={this.handleChange}
             required
-            placeholder="Enter Password"
-          /><br></br></div>
-          <div class="mb-3">
-           <label>Role:</label>
-          <input
-            type="text"
-            className="form-control"
-            name="role"
-            value={this.state.role}
-            onChange={this.handleInputChange}
-            required
-            placeholder="Enter Role"
-          /><br></br>
-            </div>
-            <a href='./studentApp' style={{"text-decoration":"none","color":"white"}}>
-        <button type="submit" style={{"background-color":"Black","color":"white"}} >Register</button>
-        </a>
+          />
+
+          <button type="submit">Login</button>
         </form>
-        <a href='./viewCourse'><button onChange={this.hello}>login</button></a>
       </div>
-      </div></div></div>
     );
   }
 }
-
-
 
 // import React, { useState } from 'react'
 // import axios from 'axios';

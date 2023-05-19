@@ -16,7 +16,6 @@ export default class AddMsg extends Component {
     this.changeContent=this.changeContent.bind(this);
     this.changetimestamp=this.changetimestamp.bind(this);
     this.saveMsg=this.saveMsg.bind(this);
-
 }
 saveMsg=async (e)=>{
   let message={
@@ -75,7 +74,7 @@ changetimestamp=(e)=>{
 
         <label>RECEIVER ID</label><br></br>
             <input type='number'
-             name="receiverId"
+             name="receiver_id"
              className="form-control"
              value={this.state.recieverId}
              onChange={this.changereceiverId}
@@ -101,7 +100,7 @@ changetimestamp=(e)=>{
              placeholder='Enter TIME `2022-02-01T10:00:00.000`' >
             </input><br></br>
 
-            <button type="submit" onClick={this.saveMsg} style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>save</button>
+            <button type="submit" onClick={this.saveMsg} style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>SAVE</button>
         
         </form>
         </div>

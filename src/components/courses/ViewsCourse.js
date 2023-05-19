@@ -15,7 +15,7 @@ export default class ViewsCourse extends Component {
             course :[]
         }
         this.listCourse=this.listCourse.bind(this);
-        this.App1=this.App1.bind(this);
+
       }
     
       listCourse(){
@@ -37,7 +37,7 @@ export default class ViewsCourse extends Component {
         <div className='container'>
           <Header></Header>
          
-         <div className='cont1' style={{width:"50%"}}>
+         <div className='cont1' style={{width:"500px"}}>
           <table >
        
           <tbody>

@@ -10,6 +10,7 @@ import AddAssign from "./components/assignment/AddAssign";
 import Register from "./components/Register";
 import AddMsg from "./components/message/AddMsg";
 import TeacherApp from "./components/TeacherApp";
+import AddSub from "./components/submission/AddSub";
 function App() {
   return (
   <div>
@@ -26,6 +27,7 @@ function App() {
           <Route path='/courseEnroll' exact component={CourseEnroll}></Route>
           <Route path='/addAssign' exact component={AddAssign}></Route>
           <Route path='/addMsg' exact component={AddMsg}></Route>
+          <Route path='/addSub' exact component={AddSub}></Route>
        </Switch>
        {/* <CourseEnroll></CourseEnroll> */}
         </Router>

@@ -22,7 +22,7 @@ saveOrupdate=async (e)=>{
             
         }
         try {
-         const response = await axios.post("http://localhost:8000/user/addEnroll1",
+         const response = await axios.post("http://localhost:8000/user/addEnroll",
                    enrollment);
        
       console.log(response.data); // Handle successful login

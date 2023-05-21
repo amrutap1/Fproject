@@ -16,6 +16,7 @@ export default class AddAssign extends Component {
         this.changeassigname=this.changeassigname.bind(this);
         this.changeduadate=this.changeduadate.bind(this);
         this.save=this.save.bind(this);
+       
     }
 
     save=async (e)=>{
@@ -24,7 +25,7 @@ export default class AddAssign extends Component {
             dueDate:this.state.dueDate,
             courseId:this.state.courseId
         }
-        alert("Assignment Added SuccessFully")
+        // alert("Assignment Added SuccessFully")
         try {
          const response = await axios.post("http://localhost:8000/user/addAssign",
                    assignment);
@@ -32,11 +33,13 @@ export default class AddAssign extends Component {
       console.log(response.data);
      
 //   this.props.history.push('./studentApp');
-
+            alert("Assignment Added");
 } catch (error) {
   console.log(error); // Handle error
+  alert("Enter Proper CourseId details");
 }
 };
+
 changecourseid=(e)=>{
     this.setState({courseId:e.target.value});
 }

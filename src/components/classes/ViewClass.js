@@ -4,24 +4,24 @@ import Header from '../Header';
 // import { Button } from 'bootstrap';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
-export default class ViewAssign extends Component {
+export default class ViewClass extends Component {
     constructor(props){
         super(props)
         this.state={
-            assignment :[]
+            classes :[]
         }
-        this.listAssign=this.listAssign.bind(this);
-        this.deleteAssign = this.deleteAssign.bind(this);
+        this.listClass=this.listClass.bind(this);
+         this.deleteClass = this.deleteClass.bind(this);
       }
 
-      listAssign(){
+      listClass(){
         this.props.history.push('/')
       }
 
       
-      deleteAssign = async (assignId) => {
+      deleteClass = async (classId) => {
         axios
-          .delete(`http://localhost:8000/teacher/deleteAssign?assignId=${assignId}`)
+          .delete(`http://localhost:8000/teacher/deleteClass?classId=${classId}`)
           .then((response) => {
             console.log('Row deleted successfully');
             alert("Deleted Successfully");
@@ -35,9 +35,9 @@ export default class ViewAssign extends Component {
 
        
       componentDidMount(){
-        StudentService.getAssign().then((res)=>{
+        StudentService.getClasses().then((res)=>{
             this.setState({
-              assignment : res.data
+              classes : res.data
             });
         });
       }
@@ -45,29 +45,31 @@ export default class ViewAssign extends Component {
     return (
       <div className='container'>
          <Header></Header>
-         <h2 style={{alignContent:"center",fontFamily:"sans-serif", marginTop:"50px",marginLeft:"450px"}}>ASSIGNMENTS </h2>
+         <h2 style={{alignContent:"center",fontFamily:"sans-serif", marginTop:"50px",marginLeft:"450px"}}>CLASSES</h2>
        
          <div className='container' style={{width:"800px", marginTop:"10px"}}>
         <table className="table table-striped table-bordered" >
           <thead>
             <tr>
-            <td>Id</td>
+            <td>Class Id</td>
+            <td>Teacher Id</td>
             <td>Course Id</td>
-            <td>Name</td>
-            <td>Due Date</td>
+            <td>Start Time</td>
+            <td>End Time</td>
             <td>Action</td>
           </tr></thead>
           <tbody>
             {
-              this.state.assignment.map(
+              this.state.classes.map(
                 st=>
                 // console.log(st)
-                <tr key={st.assignId}> 
-                <td>{st.assignId}</td>
+                <tr key={st.classId}> 
+                <td>{st.classId}</td>
+                <td>{st.user.id}</td>
                 <td>{st.course.courseId}</td>
-                <td>{st.assignName}</td>
-                <td>{st.dueDate}</td>
-               <td> <Button onClick={() => this.deleteAssign(st.assignId)}  style={{background:"purple",color:"whitesmoke" ,height:"40px" ,width:"100px" , borderRadius:"40px",border:"none"}}>Delete</Button></td>
+                <td>{st.startTime}</td>
+                <td>{st.endTime}</td>
+               <td> <Button onClick={() => this.deleteClass(st.classId)}  style={{background:"purple",color:"whitesmoke" ,height:"40px" ,width:"100px" , borderRadius:"40px",border:"none"}}>Delete</Button></td>
                 </tr>
               )
             }

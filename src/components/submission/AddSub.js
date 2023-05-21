@@ -17,45 +17,54 @@ function AddSub() {
             feedback
         };
 
-        
+        try{
             const response = await axios.post('http://localhost:8000/teacher/addSub', data);
             console.log(response.data);
             alert("submission added successfully");
+            window.location.reload();
+        }catch{
+            alert("Enter Proper Student Id")
+        }
         
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <label>ASSIGNMENT ID:</label>
+        <div className='container'>
+         <div className='container'  style={{width:"500px" ,marginTop:'50px' }} >
+            <h2>ADD SUBMISSION</h2><br></br>
+        <form onSubmit={handleSubmit} >
+            <label>ASSIGNMENT ID:</label><br></br>
             <input
                 type="number"
                 value={assignId}
                 onChange={(e) => setAssignId(e.target.value)}
-            />
+            /><br></br>
 
-            <label>STUDENT ID:</label>
+            <label>STUDENT ID:</label><br></br>
             <input
                 type="number"
                 value={studentId}
                 onChange={(e) => setStudentId(e.target.value)}
-            />
-             <label> GRADE</label>
+            /><br></br>
+             <label> GRADE</label><br></br>
             <input
                 type="text"
                 value={grade}
                 onChange={(e) => setGrade(e.target.value)}
-            />
-            <label>FEEDBACK</label>
+            /><br></br>
+            <label>FEEDBACK</label><br></br>
             <input
                 type="text"
                 value={feedback}
                 onChange={(e) => setFeedback(e.target.value)}
-            />
+            /><br></br>
 
-
-            <button type="submit">SAVE</button>
+<br></br>
+            <button type="submit" style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>SAVE</button>
         </form>
+        </div></div>
     );
 }
+
 
 export default AddSub;

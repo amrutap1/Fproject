@@ -4,34 +4,19 @@ import Header from '../Header';
 // import { Button } from 'bootstrap';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
-export default class ViewAssign extends Component {
+export default class ViewAssignStud extends Component {
     constructor(props){
         super(props)
         this.state={
             assignment :[]
         }
         this.listAssign=this.listAssign.bind(this);
-        this.deleteAssign = this.deleteAssign.bind(this);
+        // this.deleteAssign = this.deleteAssign.bind(this);
       }
 
       listAssign(){
         this.props.history.push('/')
       }
-
-      
-      deleteAssign = async (assignId) => {
-        axios
-          .delete(`http://localhost:8000/teacher/deleteAssign?assignId=${assignId}`)
-          .then((response) => {
-            console.log('Row deleted successfully');
-            alert("Deleted Successfully");
-            window.location.reload();
-          })
-          .catch((error) => {
-            console.error('Error deleting row', error);
-            alert("can't delete ");
-          });
-      };
 
        
       componentDidMount(){
@@ -55,7 +40,7 @@ export default class ViewAssign extends Component {
             <td>Course Id</td>
             <td>Name</td>
             <td>Due Date</td>
-            <td>Action</td>
+            {/* <td>Action</td> */}
           </tr></thead>
           <tbody>
             {
@@ -67,7 +52,7 @@ export default class ViewAssign extends Component {
                 <td>{st.course.courseId}</td>
                 <td>{st.assignName}</td>
                 <td>{st.dueDate}</td>
-               <td> <Button onClick={() => this.deleteAssign(st.assignId)}  style={{background:"purple",color:"whitesmoke" ,height:"40px" ,width:"100px" , borderRadius:"40px",border:"none"}}>Delete</Button></td>
+               {/* <td> <Button onClick={() => this.deleteAssign(st.assignId)}  style={{background:"purple",color:"whitesmoke" ,height:"40px" ,width:"100px" , borderRadius:"40px",border:"none"}}>Delete</Button></td> */}
                 </tr>
               )
             }

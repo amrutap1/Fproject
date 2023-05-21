@@ -3,9 +3,7 @@ import StudentService from '../../service/StudentService';
 
 import './ViewsCourse.css';
 import Header from '../Header';
-import ViewFeedback from '../Feedback/ViewFeedback';
 import ViewAssign from '../assignment/ViewAssign';
-import CourseEnroll from '../StudentEnroll/CourseEnroll';
 
 export default class ViewsCourse extends Component {
 

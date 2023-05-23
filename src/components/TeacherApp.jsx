@@ -107,7 +107,7 @@ enrollStudent(){
                 </div>
       
       </div>
-      <Footer></Footer>
+
         </div>
         
     )

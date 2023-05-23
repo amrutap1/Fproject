@@ -6,28 +6,6 @@ export default class Header extends Component {
   render() {
     return (
       <div className='container' >
-        <nav class="navbar navbar-expand-lg navbar-light " style={{backgroundColor:"white"}}>
-            <a class="navbar-brand" href="../TeacherApp" style={{color:"purple",fontStyle:"Bold",margin:"10px"}}>L M S</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="../StudentApp" style={{color:"purple"}}>Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../ViewCourse" style={{color:"purple"}}>Course</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../viewGrade" style={{color:"purple"}}>Grade</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../viewAssign" style={{color:"purple"}}>Assignments</a>
-                </li>
-                </ul>
-            </div>
-            </nav>
             <div className='container' style={{margin:"0px"}}>
                 <div className='container' style={{width:"100%",margin:"0px"}}>
                 <div id="carouselExampleCaptions" class="carousel slide">

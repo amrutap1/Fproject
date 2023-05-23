@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import axios from 'axios';
 import Header from '../Header';
 
+import eimg from '../Images/zd.jpg'
+
+
 export default class AddClasses extends Component {
 
     constructor(props){
@@ -60,9 +63,10 @@ changeendTime=(e)=>{
 }
   render() {
     return (
-      <div className='container'>
-        <Header></Header>
-        <div className='container' style={{width:"800px" ,marginTop:'50px'}}>
+      <div className='container' style={{backgroundImage:`url(${eimg})`  , height:'890px' }}>
+    
+        <div className='container' style={{width:"800px" ,marginTop:'30px'}}>
+        <h3 style={{paddingBlock:"20px"}}>ADD CLASS</h3>
         <form>
             <label> Course Id</label><br></br>
             <input type='number'

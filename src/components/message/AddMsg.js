@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Header from '../Header';
 import axios from 'axios';
+import eimg from '../Images/zd.jpg';
+
 
 export default class AddMsg extends Component {
   constructor(props){
@@ -55,11 +57,12 @@ changetimestamp=(e)=>{
     
   render() {
     return (
-      <div className='container'>
+      <div className='container' style={{backgroundImage:`url(${eimg})`  , height:'850px' }}>
         
-        <Header></Header>
-        <div className='container' style={{width:"800px" ,marginTop:'50px'}}>
+        <div className='container' style={{width:"800px" ,marginTop:'10px'}}>
 
+
+        <h3 style={{paddingBlock:"20px"}}>MESSAGE BOX</h3>
         <form>
 
         <label>SENDER ID</label><br></br>
@@ -100,9 +103,11 @@ changetimestamp=(e)=>{
              placeholder='Enter TIME `2022-02-01T10:00:00.000`' >
             </input><br></br>
 
-            <button type="submit" onClick={this.saveMsg} style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>SAVE</button>
-        
+            <button type="submit" onClick={this.saveMsg} style={{background:"#A52A2A",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>SAVE</button>
+
         </form>
+        <br></br>
+        <a href='./viewMsg'>< button style={{background:"#A52A2A",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View Message</button></a>
         </div>
       </div>
     )

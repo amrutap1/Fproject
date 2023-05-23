@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import axios from 'axios';
 import Header from '../Header';
 
+import eimg from '../Images/zd.jpg'
+
+
 export default class AddAssign extends Component {
 
     constructor(props){
@@ -54,9 +57,10 @@ changeduadate=(e)=>{
 }
   render() {
     return (
-      <div className='container'>
-        <Header></Header>
-        <div className='container' style={{width:"800px" ,marginTop:'50px'}}>
+      <div className='container'  style={{backgroundImage:`url(${eimg})`  , height:'850px' }}>
+    
+        <div className='container' style={{width:"800px" ,marginTop:'30px'}}>
+        <h3 style={{paddingBlock:"20px"}}>ADD ASSIGNMENT</h3>
         <form>
             {/* <label>assignId</label><br></br>
             <input type='number'
@@ -98,10 +102,10 @@ changeduadate=(e)=>{
             </input><br></br>
 
             {/* <button onClick={this.save}><a href='./viewAssign'>save</a></button> */}
-            <button type="submit" onClick={this.save} style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>save</button>
+            <button type="submit" onClick={this.save} style={{background:"#A52A2A",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>save</button>
         </form>
         <br></br>
-        <a href='./viewAssign'>< button style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View Assignment</button></a>
+        <a href='./viewAssign'>< button style={{background:"#A52A2A",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View Assignment</button></a>
               </div>
       </div>
     )

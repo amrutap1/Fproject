@@ -46,8 +46,8 @@ export default class ViewMsg extends Component {
                 <td>{st.msgId}</td>
                 <td>{st.user.id}</td>
                 <td>{st.user.id}</td>
-                <td></td>
-                <td>{st.assignment.assignId}</td>
+                <td>{st.content}</td>
+                <td>{st.timestamp}</td>
                 </tr>
               )
             }

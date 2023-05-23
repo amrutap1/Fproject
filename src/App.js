@@ -14,9 +14,36 @@ import AddSub from "./components/submission/AddSub";
 import ViewClass from "./components/classes/ViewClass";
 import ViewClassesStud from "./components/classes/ViewClassesStud";
 import ViewAssignStud from "./components/assignment/ViewAssignStud";
+import AddCourse from "./components/courses/AddCourse";
+import ViewMsg from "./components/message/ViewMsg";
+import Footer from "./components/Footer";
+import GradeComponent from "./components/Grades/GradeById";
+import GradeById from "./components/Grades/GradeById";
 function App() {
   return (
   <div>
+     <nav class="navbar navbar-expand-lg navbar-light " style={{backgroundColor:"white"}}>
+            <a class="navbar-brand" href="../TeacherApp" style={{color:"purple",fontStyle:"Bold",margin:"10px"}}>L M S</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../StudentApp" style={{color:"purple"}}>Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../ViewCourse" style={{color:"purple"}}>Course</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../viewGrade" style={{color:"purple"}}>Grade</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../viewAssignStud" style={{color:"purple"}}>Assignments</a>
+                </li>
+                </ul>
+            </div>
+            </nav>
     <Router>
       <Switch>
           <Route path='/'  exact component={Register}></Route>
@@ -30,14 +57,18 @@ function App() {
           <Route path='/courseEnroll' exact component={CourseEnroll}></Route>
           <Route path='/addAssign' exact component={AddAssign}></Route>
           <Route path='/addMsg' exact component={AddMsg}></Route>
+          <Route path='/viewMsg'  exact component={ViewMsg}></Route>
           <Route path='/addSub' exact component={AddSub}></Route>
           <Route path='/login' exact component={Login}></Route>
           <Route path='/viewClass' exact component={ViewClass}></Route> 
           <Route path='/viewClassStud' exact component={ViewClassesStud}></Route>
           <Route path='/viewAssignStud' exact component={ViewAssignStud}></Route>
+          <Route path='/addCourse' exact component={AddCourse}></Route>
+          <Route path='/grade' exact component={GradeById}></Route>
        </Switch>
        {/* <CourseEnroll></CourseEnroll> */}
         </Router>
+        <Footer></Footer>
         
   </div>
   );

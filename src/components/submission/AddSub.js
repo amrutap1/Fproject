@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+import eimg from '../Images/zd.jpg'
+
 function AddSub() {
     const [assignId, setAssignId] = useState('');
     const [studentId, setStudentId] = useState('');
@@ -29,9 +31,9 @@ function AddSub() {
     };
 
     return (
-        <div className='container'>
+        <div className='container'   style={{backgroundImage:`url(${eimg})`  , height:'850px' }}>
          <div className='container'  style={{width:"500px" ,marginTop:'50px' }} >
-            <h2>ADD SUBMISSION</h2><br></br>
+         <h3 style={{paddingBlock:"20px"}}>ADD FEEDBACK</h3>
         <form onSubmit={handleSubmit} >
             <label>ASSIGNMENT ID:</label><br></br>
             <input
@@ -60,7 +62,7 @@ function AddSub() {
             /><br></br>
 
 <br></br>
-            <button type="submit" style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>SAVE</button>
+            <button type="submit" style={{background:"#A52A2A",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>SAVE</button>
         </form>
         </div></div>
     );

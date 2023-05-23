@@ -26,14 +26,18 @@ class Login extends Component {
     };
     try {
       const response = await axios.post("http://localhost:8000/admin/login", user);
-
+      console.log(response.data);
       if (response.data === 'success') {
-        localStorage.setItem('role', role);
-        localStorage.setItem('userName', userName);
-        this.props.setUserRole(role);
+        if(role== 'STUDENT'){
+  
         window.location.replace('/StudentApp');
+        }else{
+          window.location.replace('/TeacherApp');
+        }
+
       } else {
         alert('Wrong Credentials');
+        console.log(response.data)
       }
     } catch (error) {
       console.log(error);

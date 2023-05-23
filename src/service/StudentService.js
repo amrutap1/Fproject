@@ -6,6 +6,7 @@ const ASSIGN="http://localhost:8000/user/getAllAssign";
 // const  ENROLLSTUDENT="http://localhost:8000/user/addEnroll";
 // const login="http://localhost:8000/admin/login"
 const CLASSES="http://localhost:8000/user/getAllClass";
+const Message="http://localhost:8000/user/getAllMsg";
 
 class StudentService{
     getStudent(){
@@ -24,6 +25,9 @@ class StudentService{
         return axios.get(CLASSES);
     }
     
+    getMsg(){
+        return axios.get(Message);
+    }
 
     // addEnroll(enrollment){
     //     return axios.post(ENROLLSTUDENT,enrollment);

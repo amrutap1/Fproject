@@ -52,7 +52,7 @@ enrollStudent(){
                     <div class="card">
                     <img src={igrade} class="card-img-top" alt="..." style={{height:"200px"}}/>
                       <div class="card-body">
-                        <h5 class="card-title"> <a href='./viewGrade'>< button style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View Grades</button></a><br></br>
+                        <h5 class="card-title"> <a href='./grade'>< button style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View Grades</button></a><br></br>
                           </h5>
                      </div>
                     </div>

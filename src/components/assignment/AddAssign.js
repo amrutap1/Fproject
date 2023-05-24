@@ -3,6 +3,7 @@ import axios from 'axios';
 import Header from '../Header';
 
 import eimg from '../Images/zd.jpg'
+import Navbar from '../../Navbar';
 
 
 export default class AddAssign extends Component {
@@ -57,10 +58,11 @@ changeduadate=(e)=>{
 }
   render() {
     return (
-      <div className='container'  style={{backgroundImage:`url(${eimg})`  , height:'850px' }}>
-    
-        <div className='container' style={{width:"800px" ,marginTop:'30px'}}>
-        <h3 style={{paddingBlock:"20px"}}>ADD ASSIGNMENT</h3>
+      <div >
+        <Navbar></Navbar>
+        <div className='container'  style={{width:'1100px', height:'850px' }}>
+        <div className='container' style={{width:"900px",height:"700px" ,marginTop:'30px',boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)'}}>
+        <h3 style={{paddingBlock:"20px" }}><u>ADD ASSIGNMENT</u></h3>
         <form>
             {/* <label>assignId</label><br></br>
             <input type='number'
@@ -102,11 +104,12 @@ changeduadate=(e)=>{
             </input><br></br>
 
             {/* <button onClick={this.save}><a href='./viewAssign'>save</a></button> */}
-            <button type="submit" onClick={this.save} style={{background:"#A52A2A",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>save</button>
+            <button type="submit" onClick={this.save} style={{background:"black",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>save</button>
         </form>
         <br></br>
-        <a href='./viewAssign'>< button style={{background:"#A52A2A",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View Assignment</button></a>
+        <a href='./viewAssign'>< button style={{background:"black",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View Assignment</button></a>
               </div>
+      </div>
       </div>
     )
   }

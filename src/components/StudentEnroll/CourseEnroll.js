@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Header from '../Header';
 import axios from 'axios';
+import Navbar from '../../Navbar';
 export default class CourseEnroll extends Component {
   constructor(props){
     super(props);
@@ -58,10 +59,9 @@ changestudentid=(e)=>{
 
 render() {
 return (
-    <div className='container'>
-      
-      <Header></Header>
-        <div className='container' style={{width:"800px" ,marginTop:'50px'}}>
+    <div >
+      <Navbar></Navbar>
+        <div className='container' style={{width:"800px" ,marginTop:'50px',height:'800px  '}}>
     <div class="container my-5">
     <div class="row justify-content-center">
       <div class="col-md-6">
@@ -76,7 +76,7 @@ return (
         onChange={this.changecourseid}
         required
         placeholder="Enter course"
-      /><br></br>
+      />
         </div>
         <div class="mb-3">
       <label>STUDENT ID</label>
@@ -92,7 +92,7 @@ return (
       
         </div>
         {/* <a href='./studentApp' style={{"text-decoration":"none","color":"white"}}> */}
-    <button style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}} onClick={this.saveOrupdate}>ENROLL</button>
+    <button style={{background:"black",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}} onClick={this.saveOrupdate}>ENROLL</button>
     </form>
   </div>
  </div> </div></div></div>

@@ -19,31 +19,14 @@ import ViewMsg from "./components/message/ViewMsg";
 import Footer from "./components/Footer";
 import GradeComponent from "./components/Grades/GradeById";
 import GradeById from "./components/Grades/GradeById";
+import EnrolledStudent from "./components/StudentEnroll/EnrolledStudent";
+import './App.css';
+import AddClasses from "./components/classes/AddClasses";
 function App() {
   return (
   <div>
-     <nav class="navbar navbar-expand-lg navbar-light " style={{backgroundColor:"white"}}>
-            <a class="navbar-brand" href="../TeacherApp" style={{color:"purple",fontStyle:"Bold",margin:"10px"}}>L M S</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="../StudentApp" style={{color:"purple"}}>Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../ViewCourse" style={{color:"purple"}}>Course</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../viewGrade" style={{color:"purple"}}>Grade</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../viewAssignStud" style={{color:"purple"}}>Assignments</a>
-                </li>
-                </ul>
-            </div>
-            </nav>
+
+
     <Router>
       <Switch>
           <Route path='/'  exact component={Register}></Route>
@@ -65,6 +48,8 @@ function App() {
           <Route path='/viewAssignStud' exact component={ViewAssignStud}></Route>
           <Route path='/addCourse' exact component={AddCourse}></Route>
           <Route path='/grade' exact component={GradeById}></Route>
+          <Route path='/enrollStud' exact component={EnrolledStudent}></Route>
+          <Route path='/addClass' exact component={AddClasses}></Route>
        </Switch>
        {/* <CourseEnroll></CourseEnroll> */}
         </Router>

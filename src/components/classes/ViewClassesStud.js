@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import StudentService from '../../service/StudentService';
 import Header from '../Header';
+import Navbar from '../../Navbar';
 // import { Button } from 'bootstrap';
 
 export default class ViewClassesStud extends Component {
@@ -29,19 +30,20 @@ export default class ViewClassesStud extends Component {
       }
   render() {
     return (
-      <div className='container'>
-         <Header></Header>
-         <h2 style={{alignContent:"center",fontFamily:"sans-serif", marginTop:"50px",marginLeft:"450px"}}>CLASSES</h2>
-       
-         <div className='container' style={{width:"800px", marginTop:"10px"}}>
-        <table className="table table-striped table-bordered" >
+      <div>
+       <Navbar></Navbar>
+       <div className='cotainer' style={{height:"800px"}}>
+         <h2 style={{alignContent:"center",fontFamily:"sans-serif", marginTop:"50px",marginLeft:"200px"}}>CLASSES</h2>
+       <br></br>
+         <div className='container' style={{width:"900px", marginTop:"10px",boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)'}}>
+        <table className="table table-striped" >
           <thead>
             <tr>
-            <td>Class Id</td>
-            <td>Teacher Id</td>
-            <td>Course Id</td>
-            <td>Start Time</td>
-            <td>End Time</td>
+            <th>Class Id</th>
+            <th>Teacher Id</th>
+            <th>Course Id</th>
+            <th>Start Time</th>
+            <th>End Time</th>
             {/* <td>Action</td> */}
           </tr></thead>
           <tbody>
@@ -62,7 +64,7 @@ export default class ViewClassesStud extends Component {
           </tbody>
       </table>
 </div>
-      </div>
+</div>    </div>
     )
   }
 

@@ -4,6 +4,7 @@ import Header from '../Header';
 // import { Button } from 'bootstrap';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
+import { Navbar } from 'react-bootstrap';
 export default class ViewClass extends Component {
     constructor(props){
         super(props)
@@ -44,7 +45,7 @@ export default class ViewClass extends Component {
   render() {
     return (
       <div className='container'>
-         <Header></Header>
+        <Navbar></Navbar>
          <h2 style={{alignContent:"center",fontFamily:"sans-serif", marginTop:"50px",marginLeft:"450px"}}>CLASSES</h2>
        
          <div className='container' style={{width:"800px", marginTop:"10px"}}>

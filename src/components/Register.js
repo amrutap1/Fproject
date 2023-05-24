@@ -49,9 +49,10 @@ export default class Register extends Component {
     return (
       <div className='container'>
         <div class="container my-5">
-        <div class="row justify-content-center">
-          <div class="col-md-6">
-            <h1 class="text-center mb-5">Register Here</h1>
+        <div class="row justify-content-center" >
+          <div class="col-md-6"  style={{boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)',height:'600px'}}>
+            <br></br>
+            <h1 class="text-center mb-5">REGISTER HERE</h1>
             <form class="container" id="formLogin" onSubmit={this.handleLogin}>
             
             {/* <div class="mb-3">
@@ -66,7 +67,7 @@ export default class Register extends Component {
             placeholder='Enter Id'
           /><br></br></div> */}
           <div class="mb-3">
-           <label>userName:</label>
+           <label>USERNAME:</label>
            <input
             type="text"
             className="form-control"
@@ -75,10 +76,10 @@ export default class Register extends Component {
             onChange={this.handleInputChange}
             required
             placeholder="Enter username"
-          /><br></br>
+          />
             </div>
             <div class="mb-3">
-          <label>Password:</label>
+          <label>PASSWORD:</label>
           <input
             type="password"
             className="form-control"
@@ -87,9 +88,9 @@ export default class Register extends Component {
             onChange={this.handleInputChange}
             required
             placeholder="Enter Password"
-          /><br></br></div>
+          /></div>
           <div class="mb-3">
-           <label>Role:</label>
+           <label>ROLE</label>
           <input
             type="text"
             className="form-control"
@@ -100,10 +101,10 @@ export default class Register extends Component {
             placeholder="Enter Role"
           />
             </div>
-        <button type="submit" style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}} >Register</button>
+        <button type="submit" style={{background:"Black",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}} >Register</button>
         </form>
        <br></br> 
-       <a href='./login'><button onChange={this.hello}  style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" ,marginLeft:"10px", borderRadius:"40px"}}>login</button></a>
+       <a href='./login'><button onChange={this.hello}  style={{background:"black",color:"whitesmoke" ,height:"50px" ,width:"210px" ,marginLeft:"10px", borderRadius:"40px"}}>login</button></a>
       </div>
       </div></div></div>
     );

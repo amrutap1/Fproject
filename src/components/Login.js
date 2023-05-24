@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import StudentService from '../service/StudentService';
 import axios from 'axios';
+import './login.css';
 
 class Login extends Component {
   constructor(props) {
@@ -49,41 +50,75 @@ class Login extends Component {
     const { userName, password, role } = this.state;
 
     return (
-      <div>
-        <h1>Login Page</h1>
+      <div className='container-fluid' >
+    <nav class="navbar navbar-expand-lg ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="./home">L M S</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      
+          
+      <form class="d-flex" role="search">
+      
+     <a href='./addCourse'><button class="btn " style={{marginLeft:"1150px", background:'black',color:"white"}}  >Home</button></a>
+      </form>
+    </div>
+  </div>
+</nav>
+      <div className='container outer'>
+        <div className='container inner loginForm' >      
+        <br></br> 
+         <h1 style={{textAlign:'center'}}>LOG IN</h1>
         <form onSubmit={this.handleLoginFormSubmit}>
-          <label>
-            userName:
-            <input
+          <label className='loginLabel'>
+            Username
+            
+          </label><br></br>
+          <input
               type="text"
               name="userName"
               value={userName}
               onChange={this.handleInputChange}
+              className="form-control loginInput"
+              required
+              placeholder='Enter Username'
             />
-          </label>
-          <br />
+         
           <label>
-            Password:
-            <input
+            Password
+           
+          </label><br></br>
+          <input
               type="password"
               name="password"
+              className="form-control"
               value={password}
               onChange={this.handleInputChange}
+              required
+              placeholder='Enter Password'
             />
-          </label>
-          <br />
+         
           <label>
-            Role:
-            <input
+            Role
+           
+          </label><br></br>
+          <input
               type="text"
               name="role"
+              className="form-control"
               value={role}
               onChange={this.handleInputChange}
-            />
-          </label>
-          <br />
-          <button type="submit">Login</button>
+              required
+              placeholder='Enter Role'
+            /><br></br>
+      
+          <button  class="loginButtom" type="submit">Login</button>
+         
         </form>
+      </div>
+      </div>
       </div>
     );
   }
@@ -91,44 +126,3 @@ class Login extends Component {
 
 export default Login;
 
-
-
-// import React, { useState } from 'react';
-// import axios from 'axios';
-
-// const Login = () => {
-//   const [userName, setUserName] = useState('');
-//   const [password, setPassword] = useState('');
-
-//   const handleLogin = async () => {
-//     try {
-//       const response = await axios.post('http://localhost:8000/admin/logins', {
-//         userName,
-//         password,
-//       });
-//       console.log(response.data); // Handle the response data as needed
-//     } catch (error) {
-//       console.error(error);
-//     }
-//   };
-
-//   return (
-//     <div>
-//       <input
-//         type="text"
-//         placeholder="Username"
-//         value={userName}
-//         onChange={(e) => setUserName(e.target.value)}
-//       />
-//       <input
-//         type="password"
-//         placeholder="Password"
-//         value={password}
-//         onChange={(e) => setPassword(e.target.value)}
-//       />
-//       <button onClick={handleLogin}>Login</button>
-//     </div>
-//   );
-// };
-
-// export default Login;

@@ -35,7 +35,7 @@ enrollStudent(){
     
   render() {
     return (
-      <div className='container' style={{height:'1000px'}}>
+      <div style={{height:'1000px'}}>
         <Header></Header>
         <div className='container'>
         <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -43,7 +43,7 @@ enrollStudent(){
                     <div class="card">
                     <img src={icourse} class="card-img-top" alt="..." style={{height:"200px"}}/>
                       <div class="card-body">
-                        <h5 class="card-title"> <a href='./viewCourse'>< button style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View Courses</button></a><br></br>
+                        <h5 class="card-title"> <a href='./viewCourse'>< button style={{background:"black",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View Courses</button></a><br></br>
                         </h5>
                         </div>
                     </div>
@@ -52,7 +52,7 @@ enrollStudent(){
                     <div class="card">
                     <img src={igrade} class="card-img-top" alt="..." style={{height:"200px"}}/>
                       <div class="card-body">
-                        <h5 class="card-title"> <a href='./viewGrade'>< button style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View Grades</button></a><br></br>
+                        <h5 class="card-title"> <a href='./viewGrade'>< button style={{background:"black",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View Grades</button></a><br></br>
                           </h5>
                      </div>
                     </div>
@@ -61,7 +61,7 @@ enrollStudent(){
                     <div class="card">
                     <img src={iassign} class="card-img-top" alt="..." style={{height:"200px"}}/>
                       <div class="card-body">
-                        <h5 class="card-title"><a href='./addAssign'>< button style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>Add Assignments Here</button></a><br></br>
+                        <h5 class="card-title"><a href='./addAssign'>< button style={{background:"black",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>Add Assignments Here</button></a><br></br>
                          </h5>
                       </div>
                     </div>
@@ -72,7 +72,7 @@ enrollStudent(){
                         
                    <img src={istud} class="card-img-top" alt="..." style={{height:"200px"}}/>
                       <div class="card-body">
-                        <h5 class="card-title"><a href='./listStudent'>< button style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View Enroll-Students</button></a><br></br>
+                        <h5 class="card-title"><a href='./enrollStud'>< button style={{background:"black",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View Enroll-Students</button></a><br></br>
                          </h5>
                       </div>
                     </div>
@@ -81,7 +81,7 @@ enrollStudent(){
                     <div class="card"> 
                    <img src={iassign} class="card-img-top" alt="..." style={{height:"200px"}}/>
                       <div class="card-body">
-                        <h5 class="card-title"><a href='./viewAssign'>< button style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View Assignment</button></a><br></br>
+                        <h5 class="card-title"><a href='./viewAssign'>< button style={{background:"black",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View Assignment</button></a><br></br>
                          </h5>
                       </div>
                     </div>
@@ -90,7 +90,7 @@ enrollStudent(){
                     <div class="card"> 
                    <img src={imsg} class="card-img-top" alt="..." style={{height:"200px"}}/>
                       <div class="card-body">
-                        <h5 class="card-title"><a href='./addMsg'>< button style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}> Add Messages </button></a><br></br>
+                        <h5 class="card-title"><a href='./addMsg'>< button style={{background:"black",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}> Add Messages </button></a><br></br>
                          </h5>
                       </div>
                     </div>
@@ -99,7 +99,7 @@ enrollStudent(){
                     <div class="card"> 
                    <img src={icourse} class="card-img-top" alt="..." style={{height:"200px"}}/>
                       <div class="card-body">
-                        <h5 class="card-title"><a href='./addCourse'>< button style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}> Add Courses</button></a><br></br>
+                        <h5 class="card-title"><a href='./addCourse'>< button style={{background:"black",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}> Add Courses</button></a><br></br>
                          </h5>
                       </div>
                     </div>

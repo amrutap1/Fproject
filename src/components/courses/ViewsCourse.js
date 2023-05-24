@@ -4,6 +4,7 @@ import StudentService from '../../service/StudentService';
 import './ViewsCourse.css';
 import Header from '../Header';
 import ViewAssign from '../assignment/ViewAssign';
+import Navbar from '../../Navbar';
 
 export default class ViewsCourse extends Component {
 
@@ -32,28 +33,29 @@ export default class ViewsCourse extends Component {
   
   render() {
     return (
-        <div className='container'>
-          <Header></Header>
-         
+        <div >
+        <Navbar></Navbar>
+         <div className='container'>
          <div className='cont1' style={{width:"500px"}}>
+         <br></br> <h2  style={{paddingLeft:'10px' ,fontFamily:"serif" ,color:"black" ,marginLeft:"60px"}}><u>COURSES</u></h2>
           <table >
        
           <tbody>
         
-          <div className="row row-cols-1 row-cols-md-3 g-4" style={{width:"1100px"}}>
+          <div className="row row-cols-2 row-cols-md-3 g-4" style={{width:"1100px"}}>
                 {this.state.course.map(st => (
                 <tr key={st.courseId}>
                 <td>
                
                 <div className="col">
-                <div className="card" style={{width:"350px"}}>
+                <div className="card " style={{width:"350px", boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)'}}>
                 <div className="card-body">
                 <h2 className="card-title"> {st.courseId}</h2>
                 <h4 className="card-title">Course Name:{st.courseName}</h4>
                 <p className="card-text">Start Date: {st.startDate}</p>
                 <p className="card-text">End Date: {st.endDate}</p>
                 <p className="card-text">Teacher Id: {st.user.id}</p>
-              <a href='./courseEnroll'>  <button style={{background:"#DDA0DD",color:"black" ,height:"50px" ,width:"210px" , borderRadius:"40px",border:"none"}}  >ENROLL HERE</button>
+              <a href='./courseEnroll'>  <button style={{background:"black",color:"white" ,height:"50px" ,width:"210px" , borderRadius:"40px",border:"none"}}  >ENROLL HERE</button>
                 </a>
                 </div>
                 </div></div>
@@ -66,7 +68,7 @@ export default class ViewsCourse extends Component {
             </tbody>
             
        </table>
-    
+    </div>
        </div>
       </div>
 

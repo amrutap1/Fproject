@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import Header from '../Header';
 import axios from 'axios';
-import eimg from '../Images/zd.jpg';
+import Navbar from '../../Navbar';
 
 
 export default class AddMsg extends Component {
@@ -57,9 +56,11 @@ changetimestamp=(e)=>{
     
   render() {
     return (
-      <div className='container' style={{backgroundImage:`url(${eimg})`  , height:'850px' }}>
+      <div>
+        <Navbar></Navbar>
+      <div className="container  backimg" style={{ height: '800px' ,border:'3px'  }}>
         
-        <div className='container' style={{width:"800px" ,marginTop:'10px'}}>
+        <div className='container' style={{width:"800px" ,height:'700px',marginTop:'40px',boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)'}}>
 
 
         <h3 style={{paddingBlock:"20px"}}>MESSAGE BOX</h3>
@@ -103,13 +104,13 @@ changetimestamp=(e)=>{
              placeholder='Enter TIME `2022-02-01T10:00:00.000`' >
             </input><br></br>
 
-            <button type="submit" onClick={this.saveMsg} style={{background:"#A52A2A",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>SAVE</button>
+            <button type="submit" onClick={this.saveMsg} style={{background:"black",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>SAVE</button>
 
         </form>
         <br></br>
-        <a href='./viewMsg'>< button style={{background:"#A52A2A",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View Message</button></a>
+        <a href='./viewMsg'>< button style={{background:"black",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View Message</button></a>
         </div>
-      </div>
+      </div></div>
     )
   }
 }

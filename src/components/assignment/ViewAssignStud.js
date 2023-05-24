@@ -4,6 +4,7 @@ import Header from '../Header';
 // import { Button } from 'bootstrap';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
+import Navbar from '../../Navbar';
 export default class ViewAssignStud extends Component {
     constructor(props){
         super(props)
@@ -28,18 +29,20 @@ export default class ViewAssignStud extends Component {
       }
   render() {
     return (
-      <div className='container'>
-         <Header></Header>
-         <h2 style={{alignContent:"center",fontFamily:"sans-serif", marginTop:"50px",marginLeft:"450px"}}>ASSIGNMENTS </h2>
-       
-         <div className='container' style={{width:"800px", marginTop:"10px"}}>
-        <table className="table table-striped table-bordered" >
+      <div  style={{height:'800px'}}>
+        <Navbar></Navbar>
+        <br></br>
+         <u><h2 style={{alignContent:"center",fontFamily:"sans-serif", marginTop:"50px",marginLeft:"200px"}}>ASSIGNMENTS </h2></u>
+        <br></br>       
+         <div className='container' style={{ width: "1000px",color:'white', marginTop: "10px", marginLeft: "auto", marginRight: "auto", boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)' }}
+       >
+        <table className="table table-striped " >
           <thead>
             <tr>
-            <td>Id</td>
-            <td>Course Id</td>
-            <td>Name</td>
-            <td>Due Date</td>
+            <th>Id</th>
+            <th>Course Id</th>
+            <th>Name</th>
+            <th>Due Date</th>
             {/* <td>Action</td> */}
           </tr></thead>
           <tbody>

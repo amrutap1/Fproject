@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-import Header from '../Header';
-
-import eimg from '../Images/zd.jpg'
+import Navbar from '../../Navbar';
 
 
 export default class AddClasses extends Component {
@@ -63,10 +61,10 @@ changeendTime=(e)=>{
 }
   render() {
     return (
-      <div className='container' style={{backgroundImage:`url(${eimg})`  , height:'890px' }}>
-    
-        <div className='container' style={{width:"800px" ,marginTop:'30px'}}>
-        <h3 style={{paddingBlock:"20px"}}>ADD CLASS</h3>
+      <div style={{  height:'900px' }}>
+       <Navbar></Navbar>
+        <div className='container' style={{width:"800px" ,marginTop:'30px', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)'}}>
+        <h3 style={{paddingBlock:"20px",textAlign:"center"}}><u>ADD CLASS</u></h3>
         <form>
             <label> Course Id</label><br></br>
             <input type='number'
@@ -109,10 +107,10 @@ changeendTime=(e)=>{
             </input><br></br>
 
             {/* <button onClick={this.save}><a href='./viewAssign'>save</a></button> */}
-            <button type="submit" onClick={this.save} style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>save</button>
+            <button type="submit" onClick={this.save} style={{background:"black",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>save</button>
         </form>
         <br></br>
-        <a href='./viewClass'>< button style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View CLASSES</button></a>
+        <a href='./viewClass'>< button style={{background:"black",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View CLASSES</button></a>
               </div>
       </div>
     )

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Header from '../Header'
 import StudentService from '../../service/StudentService'
+import Navbar from '../../Navbar'
 export default class ViewMsg extends Component {
     constructor(props){
         super(props)
@@ -24,7 +25,7 @@ export default class ViewMsg extends Component {
   render() {
     return (
       <div className='container'>
-        <Header></Header>
+          <Navbar></Navbar>
         <h2 style={{alignContent:"center",fontFamily:"sans-serif", marginTop:"50px",marginLeft:"450px"}}></h2>
         <div className='container' style={{width:"800px", marginTop:"10px"}}>
          

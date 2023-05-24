@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import StudentService from '../service/StudentService'
 import Header from './Header';
+import Navbar from '../Navbar';
 export default class  extends Component {
   constructor(props){
     super(props)
@@ -24,7 +25,7 @@ export default class  extends Component {
     render() {
     return (
       <div className='container'>
-        <Header></Header>
+       <Navbar></Navbar>
         <div className='container' style={{width:"800px" ,marginTop:'50px'}}>
         <h1>LIST STUDENT</h1>
         <table className="table table-striped table-bordered" >

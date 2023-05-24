@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import Header from '../Header';
+import Navbar from '../../Navbar';
 
 import eimg from '../Images/zd.jpg'
 
@@ -63,10 +64,11 @@ changeendDate=(e)=>{
 }
   render() {
     return (
-      <div className='container' style={{backgroundImage:`url(${eimg})`  , height:'850px' }}>
-      
-        <div className='container' style={{width:"800px" ,marginTop:'30px'}}>
-        <h3 style={{paddingBlock:"20px"}}>ADD COURSE</h3>
+      <div >
+        <Navbar></Navbar>
+      <div className='container' style={{ height:'850px' }}>
+        <div className='container' style={{width:"900px",height:'700px' ,marginTop:'30px',boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)'}}>
+        <h3 style={{paddingBlock:"20px"}}><u>ADD COURSE</u></h3>
         <form>
             <label> Course Name</label><br></br>
             <input type='text'
@@ -109,11 +111,12 @@ changeendDate=(e)=>{
             </input><br></br>
 
             {/* <button onClick={this.save}><a href='./viewAssign'>save</a></button> */}
-            <button type="submit" onClick={this.save} style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>save</button>
+            <button type="submit" onClick={this.save} style={{background:"black",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>save</button>
         </form>
         <br></br>
-        <a href='./viewCourse'>< button style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View courses</button></a>
+        <a href='./viewCourse'>< button style={{background:"black",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View courses</button></a>
               </div>
+      </div>
       </div>
     )
   }

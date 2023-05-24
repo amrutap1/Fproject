@@ -4,7 +4,7 @@ import icourse from './Images/course.jpg';
 import iassign from './Images/assign.jpg';
 import igrade from './Images/grades.jpg';
 import imsg from './Images/msg.jpg';
-import wal1 from './Images/wal1.jpg';
+import wal1 from './Images/l1.jpg';
 import iclass from './Images/class.png';
 export default class StudentApp extends Component {
 
@@ -35,7 +35,7 @@ enrollStudent(){
     
   render() {
     return (
-      <div className='container'>
+      <div>
         <Header></Header>
         <div className='container'>
         <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -43,7 +43,7 @@ enrollStudent(){
                     <div class="card">
                     <img src={icourse} class="card-img-top" alt="..." style={{height:"200px"}}/>
                       <div class="card-body">
-                        <h5 class="card-title"> <a href='./viewCourse'>< button style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View Courses</button></a><br></br>
+                        <h5 class="card-title"> <a href='./viewCourse'>< button style={{background:"black",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View Courses</button></a><br></br>
                         </h5>
                         </div>
                     </div>
@@ -52,7 +52,7 @@ enrollStudent(){
                     <div class="card">
                     <img src={igrade} class="card-img-top" alt="..." style={{height:"200px"}}/>
                       <div class="card-body">
-                        <h5 class="card-title"> <a href='./grade'>< button style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View Grades</button></a><br></br>
+                        <h5 class="card-title"> <a href='./grade'>< button style={{background:"black",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View Grades</button></a><br></br>
                           </h5>
                      </div>
                     </div>
@@ -70,7 +70,7 @@ enrollStudent(){
                     <div class="card">
                     <img src={iassign} class="card-img-top" alt="..." style={{height:"200px"}}/>
                       <div class="card-body">
-                        <h5 class="card-title"><a href='./viewAssignStud'>< button style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View Assignment</button></a><br></br>
+                        <h5 class="card-title"><a href='./viewAssignStud'>< button style={{background:"black",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>View Assignment</button></a><br></br>
                          </h5>
                       </div>
                     </div>
@@ -80,7 +80,7 @@ enrollStudent(){
                       
                     <img src={wal1} class="card-img-top" alt="..." style={{height:"200px"}}/>
                       <div class="card-body">
-                        <h5 class="card-title"><a href='./courseEnroll'>< button style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}> Enroll Here</button></a><br></br>
+                        <h5 class="card-title"><a href='./courseEnroll'>< button style={{background:"black",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}> Enroll Here</button></a><br></br>
                          </h5>
                       </div>
                     </div>
@@ -89,16 +89,16 @@ enrollStudent(){
                     <div class="card"> 
                    <img src={imsg} class="card-img-top" alt="..." style={{height:"200px"}}/>
                       <div class="card-body">
-                        <h5 class="card-title"><a href='./addMsg'>< button style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}> Add Messages </button></a><br></br>
+                        <h5 class="card-title"><a href='./addMsg'>< button style={{background:"black",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}> Add Messages </button></a><br></br>
                          </h5>
                       </div>
                     </div>
                   </div>
-                  <div class="col">
-                    <div class="card"> 
+                  <div class="col" >
+                    <div class="card" > 
                    <img src={iclass} class="card-img-top" alt="..." style={{height:"200px"}}/>
                       <div class="card-body">
-                        <h5 class="card-title"><a href='./viewClassStud'>< button style={{background:"purple",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}> View Classes </button></a><br></br>
+                        <h5 class="card-title"><a href='./viewClassStud'>< button style={{background:"black",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}> View Classes </button></a><br></br>
                          </h5>
                       </div>
                     </div>

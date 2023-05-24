@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 import eimg from '../Images/zd.jpg'
+import Navbar from '../../Navbar';
 
 function AddSub() {
     const [assignId, setAssignId] = useState('');
@@ -31,6 +32,8 @@ function AddSub() {
     };
 
     return (
+        <div>
+            <Navbar></Navbar>
         <div className='container'   style={{backgroundImage:`url(${eimg})`  , height:'850px' }}>
          <div className='container'  style={{width:"500px" ,marginTop:'50px' }} >
          <h3 style={{paddingBlock:"20px"}}>ADD FEEDBACK</h3>
@@ -64,7 +67,7 @@ function AddSub() {
 <br></br>
             <button type="submit" style={{background:"#A52A2A",color:"whitesmoke" ,height:"50px" ,width:"210px" , borderRadius:"40px"}}>SAVE</button>
         </form>
-        </div></div>
+        </div></div></div>
     );
 }
 

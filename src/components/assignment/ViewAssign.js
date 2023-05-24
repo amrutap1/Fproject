@@ -4,6 +4,7 @@ import Header from '../Header';
 // import { Button } from 'bootstrap';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
+import Navbar from '../../Navbar';
 export default class ViewAssign extends Component {
     constructor(props){
         super(props)
@@ -43,19 +44,20 @@ export default class ViewAssign extends Component {
       }
   render() {
     return (
-      <div className='container'>
-         <Header></Header>
-         <h2 style={{alignContent:"center",fontFamily:"sans-serif", marginTop:"50px",marginLeft:"450px"}}>ASSIGNMENTS </h2>
-       
-         <div className='container' style={{width:"800px", marginTop:"10px"}}>
-        <table className="table table-striped table-bordered" >
+      <div style={{height:'800px'}}>
+        <Navbar></Navbar>
+         <h2 style={{alignContent:"center",fontFamily:"sans-serif", marginTop:"50px",marginLeft:"100px"}}>ASSIGNMENTS </h2>
+       <br></br>
+         <div className='container' style={{ width: "1000px",color:'white',marginTop: "10px", marginLeft: "auto", marginRight: "auto", boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)' }}
+       >
+        <table className="table table-striped " >
           <thead>
             <tr>
-            <td>Id</td>
-            <td>Course Id</td>
-            <td>Name</td>
-            <td>Due Date</td>
-            <td>Action</td>
+            <th>Id</th>
+            <th>Course Id</th>
+            <th>Name</th>
+            <th>Due Date</th>
+            <th>Action</th>
           </tr></thead>
           <tbody>
             {
@@ -67,7 +69,7 @@ export default class ViewAssign extends Component {
                 <td>{st.course.courseId}</td>
                 <td>{st.assignName}</td>
                 <td>{st.dueDate}</td>
-               <td> <Button onClick={() => this.deleteAssign(st.assignId)}  style={{background:"purple",color:"whitesmoke" ,height:"40px" ,width:"100px" , borderRadius:"40px",border:"none"}}>Delete</Button></td>
+               <td> <Button onClick={() => this.deleteAssign(st.assignId)}  style={{background:"black",color:"whitesmoke" ,height:"40px" ,width:"100px" , borderRadius:"40px",border:"none"}}>Delete</Button></td>
                 </tr>
               )
             }

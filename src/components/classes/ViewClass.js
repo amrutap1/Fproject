@@ -4,7 +4,7 @@ import Header from '../Header';
 // import { Button } from 'bootstrap';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
-import { Navbar } from 'react-bootstrap';
+import Navbar from '../../Navbar';
 export default class ViewClass extends Component {
     constructor(props){
         super(props)
@@ -44,20 +44,21 @@ export default class ViewClass extends Component {
       }
   render() {
     return (
-      <div className='container'>
-        <Navbar></Navbar>
-         <h2 style={{alignContent:"center",fontFamily:"sans-serif", marginTop:"50px",marginLeft:"450px"}}>CLASSES</h2>
+      <div >
+      <Navbar></Navbar>
+        <div style={{height:"800px"}}>
+         <h2 style={{alignContent:"center",fontFamily:"sans-serif", marginTop:"50px",marginLeft:"190px"}}>CLASSES</h2>
        
-         <div className='container' style={{width:"800px", marginTop:"10px"}}>
-        <table className="table table-striped table-bordered" >
+         <div className='container' style={{width:"800px", marginTop:"10px"}}><br></br>
+        <table className="table table-striped "style={{boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)'}} >
           <thead>
             <tr>
-            <td>Class Id</td>
-            <td>Teacher Id</td>
-            <td>Course Id</td>
-            <td>Start Time</td>
-            <td>End Time</td>
-            <td>Action</td>
+            <th>Class Id</th>
+            <th>Teacher Id</th>
+            <th>Course Id</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Action</th>
           </tr></thead>
           <tbody>
             {
@@ -70,13 +71,13 @@ export default class ViewClass extends Component {
                 <td>{st.course.courseId}</td>
                 <td>{st.startTime}</td>
                 <td>{st.endTime}</td>
-               <td> <Button onClick={() => this.deleteClass(st.classId)}  style={{background:"purple",color:"whitesmoke" ,height:"40px" ,width:"100px" , borderRadius:"40px",border:"none"}}>Delete</Button></td>
+               <td> <Button onClick={() => this.deleteClass(st.classId)}  style={{background:"black",color:"whitesmoke" ,height:"40px" ,width:"100px" , borderRadius:"20px",border:"none"}}>Delete</Button></td>
                 </tr>
               )
             }
           </tbody>
       </table>
-        
+        </div>
 </div>
       </div>
     )

@@ -32,7 +32,7 @@ export default class ViewAssignStud extends Component {
       <div  style={{height:'800px'}}>
         <Navbar></Navbar>
         <br></br>
-         <u><h2 style={{alignContent:"center",fontFamily:"sans-serif", marginTop:"50px",marginLeft:"200px"}}>ASSIGNMENTS </h2></u>
+         <h2 style={{alignContent:"center",fontFamily:"sans-serif", marginTop:"50px",marginLeft:"190px"}}>ASSIGNMENTS </h2>
         <br></br>       
          <div className='container' style={{ width: "1000px",color:'white', marginTop: "10px", marginLeft: "auto", marginRight: "auto", boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)' }}
        >

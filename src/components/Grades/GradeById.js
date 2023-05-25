@@ -92,7 +92,8 @@ class GradeById extends Component {
         this.setState({ submission: response.data });
       })
       .catch((error) => {
-        console.error('Error fetching grades:', error);
+        console.error('Error fetching grades:', error); 
+      alert('Enter Valid Student Id');
       });
   };
 
@@ -102,57 +103,7 @@ class GradeById extends Component {
     return (
       <div>
         <Navbar></Navbar>
-      {/* <div className="container" style={{ height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}> */}
-        {/* <div className="container" style={{ textAlign: 'center', color: 'black' , width:'500px' }}>
-          <h1 style={{ padding: '30px' }}>Grades and Feedback</h1>
-          <form onSubmit={this.handleSubmit} style={{ marginBottom: '20px' }}>
-            <h4 style={{ color: 'black' ,paddingRight:"300px"}}>
-              STUDENT ID  </h4>
-              <input type="text" value={studentId} 
-              onChange={this.handleChange} 
-              style={{ marginLeft: '10px' }} 
-              className="form-control"
-              required
-              placeholder='Enter Id'/>
-          
-            <br></br>
-            <button
-              type="submit"
-              style={{
-                marginLeft: '30px',
-                background: 'black',
-                color: 'whitesmoke',
-                height: '50px',
-                width: '210px',
-                borderRadius: '40px',
-                border: 'none'
-              }}
-            >
-              Fetch Grades
-            </button>
-          </form>
-          {submission.length > 0 ? (
-            <table className="table table-striped table-bordered" style={{ margin: 'auto', width: '80%' }}>
-              <thead>
-                <tr>
-                  <th>Grade</th>
-                  <th>Feedback</th>
-                </tr>
-              </thead>
-              <tbody>
-                {submission.map((grade) => (
-                  <tr key={grade.id}>
-                    <td>{grade.grade}</td>
-                    <td>{grade.feedback}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          ) : (
-            <p>No grades found for the specified student ID.</p>
-          )}
-        </div>
-      </div> */}
+    
       <div className="container  backimg" style={{ height: '800px'   }}>
         <div className="container" style={{}}>
           <br></br>

@@ -63,8 +63,8 @@ changeendTime=(e)=>{
     return (
       <div style={{  height:'900px' }}>
        <Navbar></Navbar>
-        <div className='container' style={{width:"800px" ,marginTop:'30px', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)'}}>
-        <h3 style={{paddingBlock:"20px",textAlign:"center"}}><u>ADD CLASS</u></h3>
+        <div className='container' style={{width:"800px" ,height:"700px",marginTop:'30px', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)'}}>
+        <h3 style={{paddingBlock:"20px"}}>ADD CLASS</h3>
         <form>
             <label> Course Id</label><br></br>
             <input type='number'
@@ -86,23 +86,23 @@ changeendTime=(e)=>{
             >
             </input><br></br>
             <label>Start Time</label><br></br>
-            <input type='time'
+            <input type='text'
              name="startTime"
              className="form-control"
              value={this.state.startTime}
              onChange={this.changestartTime}
              required
-             placeholder='Enter Start time'
+             placeholder='Enter Start time `02:00:00`'
             >
             </input><br></br>
-            <label>end Time</label><br></br>
-            <input type='time'
+            <label>End Time</label><br></br>
+            <input type='text'
              name="endTime"
              className="form-control"
              value={this.state.endTime}
              onChange={this.changeendTime}
              required
-             placeholder='Enter time'
+             placeholder='Enter End time `04:00:00`'
             >
             </input><br></br>
 

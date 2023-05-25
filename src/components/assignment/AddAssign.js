@@ -35,6 +35,7 @@ export default class AddAssign extends Component {
                    assignment);
        
       console.log(response.data);
+      alert("Assignment Added Successfully");
      
 //   this.props.history.push('./studentApp');
             alert("Assignment Added");
@@ -61,8 +62,8 @@ changeduadate=(e)=>{
       <div >
         <Navbar></Navbar>
         <div className='container'  style={{width:'1100px', height:'850px' }}>
-        <div className='container' style={{width:"900px",height:"700px" ,marginTop:'30px',boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)'}}>
-        <h3 style={{paddingBlock:"20px" }}><u>ADD ASSIGNMENT</u></h3>
+        <div className='container' style={{width:"800px",height:"700px" ,marginTop:'30px',boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)'}}>
+        <h3 style={{paddingBlock:"20px" }}>ADD ASSIGNMENT</h3>
         <form>
             {/* <label>assignId</label><br></br>
             <input type='number'

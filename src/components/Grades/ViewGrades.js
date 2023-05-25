@@ -98,7 +98,7 @@ export default class ViewGrades extends Component {
             marginTop: "50px",
             marginLeft:"100px"
           }}
-        ><u>          GRADES</u>
+        >  GRADES
         </h2>
         <br></br>
         <div

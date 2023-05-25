@@ -33,7 +33,7 @@ export default class ViewClassesStud extends Component {
       <div>
        <Navbar></Navbar>
        <div className='cotainer' style={{height:"800px"}}>
-         <h2 style={{alignContent:"center",fontFamily:"sans-serif", marginTop:"50px",marginLeft:"200px"}}>CLASSES</h2>
+         <h2 style={{alignContent:"center",fontFamily:"sans-serif", marginTop:"50px",marginLeft:"190px"}}>CLASSES</h2>
        <br></br>
          <div className='container' style={{width:"900px", marginTop:"10px",boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)'}}>
         <table className="table table-striped" >

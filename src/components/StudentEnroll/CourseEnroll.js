@@ -25,7 +25,7 @@ saveOrupdate=async (e)=>{
         try {
          const response = await axios.post("http://localhost:8000/user/addEnroll",
                    enrollment);
-       
+       alert("Enrolled Successfully");
       console.log(response.data); // Handle successful login
 //   this.props.history.push('./studentApp');
 } catch (error) {
@@ -61,10 +61,11 @@ render() {
 return (
     <div >
       <Navbar></Navbar>
-        <div className='container' style={{width:"800px" ,marginTop:'50px',height:'800px  '}}>
-    <div class="container my-5">
+    <div className='container' style={{height:"800px"}}>
+    <div class="container my-5"  style={{width:"500px" ,marginTop:'50px',height:'500px'  ,boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)'}}>
     <div class="row justify-content-center">
-      <div class="col-md-6">
+      <div class="col-md-6"><br></br>
+        <h2 >ENROLL HERE</h2>
         <form >
       <div class="mb-3">
        <label>COURSE ID</label>

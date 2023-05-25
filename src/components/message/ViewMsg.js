@@ -24,12 +24,12 @@ export default class ViewMsg extends Component {
       }
   render() {
     return (
-      <div className='container'>
+      <div>
           <Navbar></Navbar>
-        <h2 style={{alignContent:"center",fontFamily:"sans-serif", marginTop:"50px",marginLeft:"450px"}}></h2>
-        <div className='container' style={{width:"800px", marginTop:"10px"}}>
+        <h2 style={{alignContent:"center",fontFamily:"sans-serif", marginTop:"50px",marginLeft:"190px"}}>MESSAGE BOX</h2>
+        <div className='container' style={{width:"1000px", marginTop:"10px"}}>
          
-        <table className="table table-striped table-bordered" align='center' >
+        {/* <table className="table table-striped " align='center' >
           <thead >
             <tr>
             <td>Id</td>
@@ -54,10 +54,33 @@ export default class ViewMsg extends Component {
             }
           </tbody>
       </table>
-        
+    {     */}
 
+<div className="row row-cols-2 row-cols-md-3 g-4" style={{width:"1200px"}}>
+    {this.state.message.map((st) => (
+      <div className="card" align="">
+      <div className="card-header">
+       <b>Messages</b> 
+      </div>
+      <div className="card-body">
+      <div className="card mb-6" key={st.msgId}>
+        <div className="card-body" style={{boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)'}}>
+          <h5 className="card-title">Message Id: {st.msgId}</h5>
+          <p className="card-text">Sender ID: {st.user.id}</p>
+          <p className="card-text">Receiver ID: {st.user.id}</p>
+          <p className="card-text">Content: {st.content}</p>
+          <p className="card-text">Time: {st.timestamp}</p>
         </div>
       </div>
+      
+
+ </div>
+        </div>
+
+    ))}
+    </div>
+  </div>
+</div>
     )
   }
 }

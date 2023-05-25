@@ -27,12 +27,14 @@ export default class Header extends Component {
                     <a class="nav-link" href="../viewAssignStud" style={{color:"white",paddingRight:"50px"}}><b>Assignments</b></a>
                 </li>
                 </ul>
+                <a href='./login'> <button style={{color:"white" ,padding:"10px" ,background:"grey",borderRadius:"15px",width:"100px", boxSizing:"border-box" }}>LogOut</button></a>
+           
             </div>
             </nav>
 
-            <div className='container' style={{marginLeft:'100px',marginTop:'20px'}}>
-                <div className='container' style={{width:"100%",margin:"0px"}}>
-                <div id="carouselExampleCaptions" class="carousel slide" style={{width:'1100px'}}>
+            <div >
+                <div  style={{width:"100px",margin:"0px"}}>
+                <div id="carouselExampleCaptions" class="carousel slide" style={{width:'1500px' , height:"500px"}}>
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -40,17 +42,17 @@ export default class Header extends Component {
                     </div>
                     <div class="carousel-inner">
                     <div class="carousel-item active">
-                    <img src={lms} class="d-block w-100" alt="..." style={{height:"400px" ,width:"100%"}}/>
+                    <img src={lms} class="d-block w-100" alt="..." style={{height:"500px" ,width:"100%"}}/>
                     
                     </div>
                     <div class="carousel-item">
-                    <img src={code} class="d-block w-100" alt="..."  style={{height:"400px"}}/>
+                    <img src={code} class="d-block w-100" alt="..."  style={{height:"500px"}}/>
                     <div class="carousel-caption d-none d-md-block">
                         
                     </div>
                     </div>
                     <div class="carousel-item">
-                    <img src={wal1} class="d-block w-100" alt="..." style={{height:"400px"}}/>
+                    <img src={wal1} class="d-block w-100" alt="..." style={{height:"500px"}}/>
                     {/* <div class="carousel-caption d-none d-md-block">
                         {/* <h5>Third slide label</h5>
                         <p>Some representative placeholder content for the third slide.</p> */}

@@ -62,7 +62,7 @@ class Login extends Component {
           
       <form class="d-flex" role="search">
       
-     <a href='./addCourse'><button class="btn " style={{marginLeft:"1150px", background:'black',color:"white"}}  >Home</button></a>
+     <a href='./addCourse'><button class="btn " style={{marginLeft:"1300px",width:"90px", background:'black',color:"white"}}  >Home</button></a>
       </form>
     </div>
   </div>

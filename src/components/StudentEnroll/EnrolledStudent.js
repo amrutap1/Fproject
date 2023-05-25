@@ -74,7 +74,6 @@
 // export default EnrolledStudent;
 import React, { Component } from 'react';
 import axios from 'axios';
-import wal from '../Images/imag.jpg';
 import '../style.css';
 import Navbar from '../../Navbar';
 
@@ -107,8 +106,8 @@ class EnrolledStudent extends Component {
     return (
       <div>
         <Navbar></Navbar>
-      <div className="container  backimg" style={{ height: '800px'   }}>
-        <div className="container" style={{}}>
+      <div className="container  backimg" style={{ height: '800px' }}>
+        <div style={{ width:'400px',height:"500px",marginLeft:"100px"}}>
           <br></br>
           <h2 className="mt-5 ">ENROLLED STUDENTS</h2>
           <div className="row mt-5">
@@ -122,12 +121,14 @@ class EnrolledStudent extends Component {
                   value={courseId}
                   onChange={this.handleInputChange}
                   placeholder="Enter Course ID"
+                  style={{width:'300px'}}
                 />
               </div>
               <br></br>
               <button
                 className="btn btn-dark btn-block"
                 onClick={this.fetchEnrolledStudents}
+                style={{width:'150px',height:"50px"}}
               >
                 Fetch STUDENTS
               </button>

@@ -35,9 +35,10 @@ export default class ViewsCourse extends Component {
     return (
         <div >
         <Navbar></Navbar>
-         <div className='container'>
+         <div style={{marginLeft:"150px"}}>
          <div className='cont1' style={{width:"500px"}}>
-         <br></br> <h2  style={{paddingLeft:'10px' ,fontFamily:"serif" ,color:"black" ,marginLeft:"60px"}}><u>COURSES</u></h2>
+          <br></br>
+         <br></br> <h2  style={{paddingLeft:'10px' ,fontFamily:"serif" ,color:"black" }}>COURSES</h2>
           <table >
        
           <tbody>

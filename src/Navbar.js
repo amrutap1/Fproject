@@ -23,7 +23,11 @@ export default class Navbar extends Component {
                 <li class="nav-item">
                     <a class="nav-link" href="../viewAssignStud" style={{color:"white",paddingRight:"50px"}}><b>Assignments</b></a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../viewMsg" style={{color:"white",paddingRight:"50px"}}><b>Messages</b></a>
+                </li>
                 </ul>
+               <a href='./login'> <button style={{color:"white" ,padding:"10px" ,background:"grey",borderRadius:"15px",width:"100px", boxSizing:"border-box" }}>LogOut</button></a>
             </div>
             </nav>
       </div>

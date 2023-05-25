@@ -68,7 +68,7 @@ changeendDate=(e)=>{
         <Navbar></Navbar>
       <div className='container' style={{ height:'850px' }}>
         <div className='container' style={{width:"900px",height:'700px' ,marginTop:'30px',boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)'}}>
-        <h3 style={{paddingBlock:"20px"}}><u>ADD COURSE</u></h3>
+        <h3 style={{paddingBlock:"20px"}}>ADD COURSE</h3>
         <form>
             <label> Course Name</label><br></br>
             <input type='text'
@@ -99,7 +99,7 @@ changeendDate=(e)=>{
              placeholder='Enter Start date'
             >
             </input><br></br>
-            <label>end Date</label><br></br>
+            <label>End Date</label><br></br>
             <input type='text'
              name="endDate"
              className="form-control"

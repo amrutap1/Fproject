@@ -24,15 +24,15 @@ export default class  extends Component {
   }
     render() {
     return (
-      <div className='container'>
+      <div >
        <Navbar></Navbar>
-        <div className='container' style={{width:"800px" ,marginTop:'50px'}}>
-        <h1>LIST STUDENT</h1>
-        <table className="table table-striped table-bordered" >
+        <div className='container' style={{width:"1200px" ,marginTop:'50px',height:"800px"}}>
+        <h1>LIST STUDENT</h1><br></br>
+        <table className="table table-striped" style={{marginLeft:'100px',width:"700px"}} >
           <thead>
             <tr>
-            <td>ID</td>
-            <td>STUDENT NAME</td>
+            <th>ID</th>
+            <th>STUDENT NAME</th>
             {/* <td>password</td> */}
           </tr></thead>
           <tbody>
